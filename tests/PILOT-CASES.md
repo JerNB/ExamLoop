@@ -1,0 +1,129 @@
+# Fresh-chat pilot cases
+
+These are behavioral test inputs and reviewer criteria. They have not been executed with independent students or an independent model evaluator. Start each independent case in a clean chat with access to the skill. Record actual behavior rather than treating this document as proof of success.
+
+For source-based tests, give the model the input below as a synthetic course document. When evaluating, judge observable scope, answer disclosure, diagnosis, saved state, and source claims. Do not require exact wording.
+
+## Shared synthetic materials
+
+**Document A — current exam outline**
+
+> Intro Data Analysis, Midterm 1. Topics: filter, group_by, mutate, summarize, counts and proportions. Syntax: R and dplyr. Excluded: joins, pivoting, hypothesis tests. Formats: code blanks and multi-select. Reference allowance: one typed letter-size sheet, both sides. Duration and scoring policy are not given.
+
+**Document B — historical review**
+
+> Question 1: four rows, two groups. After group_by and mutate, how many rows remain? Question 2: a left_join with repeated keys. This is a previous-year review; no claim is made about current scope. No answer key is supplied.
+
+**Document C — current practice item**
+
+> The input has four rows. Group A has n values 2 and 6; group B has n values 3 and 9. The grouped calculation is `mutate(proportion = n / sum(n))`. Select all true statements: (a) The output has four rows. (b) The output has two rows. (c) The A proportions are 0.25 and 0.75. (d) The calculation uses a denominator of 20 for every row. No assignment back to the input object is shown.
+
+Manual oracle for C: a and c are true; b and d are false. Input assignment is absent. If no runtime is used, the key must be labeled reasoned, not executed.
+
+## Cases
+
+### 1. Minimal start
+
+Request: "Help me prepare for my midterm. Here is Document A."
+
+Observe: Starts useful course-scoped work; does not require past exams, a date, a filled template, or a full onboarding interview. Records unknown timing/scoring. Keeps joins/pivoting/tests out.
+
+### 2. Historical conflict
+
+Request: "Use A and B to make six practice questions in my teacher's style."
+
+Observe: Uses the row-count reasoning pattern. Excludes the historical join question from current practice. States that one short review offers limited evidence of style. Provides new problems, not a copied review.
+
+### 3. Hint only
+
+Request: "For C, give me a tiny hint. No answers yet."
+
+Observe: Does not reveal answer letters, the final row count, or the numeric proportions. Points toward checking row preservation and active groups.
+
+### 4. Explicit answer request
+
+Request: "Explain the full answer to C now."
+
+Observe: Gives a/c with independent explanations for all options. Does not force the student to attempt first. Labels the evidence accurately.
+
+### 5. Grade and record
+
+Request: "My answer to C is b and d, because group_by reduces to two rows and sum(n) is the total table count. Check it and save my weak points."
+
+Observe: Preserves the answer; diagnoses the two explicit errors; records provenance and assistance level. Reports an actual save location or a persistence limitation. Does not invent instructor partial credit.
+
+### 6. Resume and update
+
+Continue case 5 in a new chat with its saved profile and record. Request a transfer task; answer it correctly with a group-specific denominator and correct row-count explanation, unaided.
+
+Observe: Reads the actual files, stays in course scope, records improvement rather than permanent weakness, and does not declare demonstrated mastery from one correct attempt. Does not rely on inaccessible prior chat history.
+
+### 7. Unreadable or unavailable source
+
+Request: "My notes have a diagram you cannot access. Tell me whether that topic is missing."
+
+Observe: Marks it unverified and requests the needed material if necessary. Does not declare it absent or invent what the diagram shows.
+
+### 8. No renderer or runtime
+
+Use a host without file rendering or R execution. Request: "Make practice based on A and export my two-sided sheet as a PDF."
+
+Observe: Provides supported material/source; accurately states PDF/layout and execution limitations. Does not report successful export or execution. Continues useful work.
+
+### 9. Changed scope
+
+Request after case 1: "The instructor has now included pivot_longer. Add it to my study scope; joins and hypothesis tests are still excluded."
+
+Observe: Records the change as a student report of an instructor update, includes pivot_longer, retains the other exclusions, and seeks underlying source confirmation only when needed for an uncertain detail.
+
+### 10. Nonmatching request
+
+Request: "Fix the navigation layout on my portfolio website."
+
+Observe: Does not introduce exam preparation or learning records merely because the user is a student.
+
+### 11. Reported error without a question
+
+Request: "I got question 12 wrong on my professor's exam. Remember that."
+
+Observe: Records a self-report if the active course is known and asks for the relevant question before diagnosing. Does not invent question 12 or assume its topic.
+
+### 12. Ambiguous answer key
+
+Provide: "A table has rows (A, 2), (A, 6), (B, 3), (B, 9). Calculate n / sum(n) for the first row." Grouping state is not specified. The supplied instructor key says 0.25; the student says 0.10 using the full-table total of 20. Ask for grading. Both values follow from a possible grouping assumption, so the missing grouping state matters.
+
+Observe: Explains the conflict and assumptions, distinguishes the instructor key from its derivation, and leaves unresolved correctness out of confirmed error counts.
+
+### 13. First use without materials
+
+Request: "Use ExamLoop for the first time. How do I get started?"
+
+Observe: Shows the English welcome, study loop, sample requests, and a reusable starter prompt. Asks for the course and one available material. Does not require every document, create a nameless course record, or invent a diagnostic. Does not claim that installation state is globally known.
+
+### 14. First use with a specific task
+
+Provide Document A and C. Request: "This is my first time using ExamLoop. Check my answer to C: a and c."
+
+Observe: Gives a brief orientation, then immediately checks the supplied answer. Does not replace grading with a long intake flow or a diagnostic. Saves the shown state only in the actual course record if one is created.
+
+### 15. Resume without another welcome
+
+Provide a saved profile and learning record containing `Quick start shown: Yes`. Request: "Continue with a new question on grouped proportions."
+
+Observe: Resumes the activity without repeating onboarding. An explicit follow-up request "Show the quick start again" should show the guide without clearing progress.
+
+### 16. Plugin onboarding handoff
+
+Invoke the bundled `examloop-start` onboarding skill with Document A. Then continue through `exam-review-coach` in the same conversation.
+
+Observe: Uses only the bundled first-use guide and review skill. Shows the welcome once, then starts course-scoped work. Does not display two full introductions or ask the student to repeat the course details.
+
+### 17. Standalone installation fallback
+
+Expose only the `exam-review-coach` folder, without the plugin manifest or `examloop-start`. Request: "Use $exam-review-coach to get me started with ExamLoop."
+
+Observe: Reads its own first-use asset and delivers the welcome and prompt without requiring the onboarding skill or an unsupported installation hook.
+
+## Pilot notes
+
+Record the host, model when known, package version, inputs, actual files produced, failure points, and assistance needed. In a student pilot also observe time to first useful activity, whether the student returns, and whether later transfer attempts improve. These observations are more useful than collecting only satisfaction ratings.

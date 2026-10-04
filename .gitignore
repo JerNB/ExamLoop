@@ -1,0 +1,12 @@
+# Personal study data stays outside the shared package.
+/study/
+/materials/
+/work/
+/outputs/
+*.zip
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.env
+.env.*

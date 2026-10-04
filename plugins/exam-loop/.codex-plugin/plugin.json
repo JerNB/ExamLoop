@@ -1,0 +1,27 @@
+{
+  "name": "exam-loop",
+  "version": "0.2.0",
+  "description": "Prepare for college exams with course-scoped practice, feedback, a persistent learning record, and review guides.",
+  "skills": "./skills/",
+  "repository": "https://github.com/JerNB/ExamLoop",
+  "author": { "name": "Jerry Wu", "url": "https://github.com/JerNB" },
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/examloop-start/SKILL.md"
+    }
+  },
+  "interface": {
+    "displayName": "ExamLoop",
+    "shortDescription": "Practice, get feedback, and review within your course scope.",
+    "developerName": "Jerry Wu",
+    "category": "Productivity",
+    "capabilities": ["Course scope", "Practice exams", "Answer feedback", "Learning records", "Review guides"],
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Get me started with ExamLoop and show me how to study efficiently.",
+      "Check my practice answers and turn my mistakes into targeted questions.",
+      "Use my course outline and past exams to build a practice exam with a separate answer key."
+    ]
+  }
+}

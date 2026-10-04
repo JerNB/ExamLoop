@@ -1,0 +1,6 @@
+interface:
+  display_name: "Get started with ExamLoop"
+  short_description: "Learn the study loop and start with your course materials"
+  default_prompt: "Use $examloop-start to show me how to use ExamLoop and help me start studying for my exam."
+policy:
+  allow_implicit_invocation: true

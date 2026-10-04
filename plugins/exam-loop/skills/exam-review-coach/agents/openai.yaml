@@ -1,0 +1,6 @@
+interface:
+  display_name: "ExamLoop"
+  short_description: "Course-scoped practice, feedback, and review guides"
+  default_prompt: "Use $exam-review-coach to get me started with ExamLoop: show the quick start, then help me prepare using my course materials."
+policy:
+  allow_implicit_invocation: true
