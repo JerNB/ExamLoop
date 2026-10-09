@@ -3,6 +3,7 @@
 ## Study setup
 
 - Quick start shown: No
+- Preferred review output: Unknown; offer webpage or guide when relevant
 
 ## Active course and exam
 

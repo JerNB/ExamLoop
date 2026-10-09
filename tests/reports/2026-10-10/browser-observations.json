@@ -1,0 +1,11 @@
+{
+  "testedArtifact": "revised/outputs/sta-demo-review.html",
+  "browser": "Chrome",
+  "controlsTested": ["blank check", "wrong denominator", "equivalent percent and fraction", "retry", "hint", "row count check", "reveal", "reset", "correct number with unreviewed explanation", "export text", "download"],
+  "keyboardTabFrom": "R1-a",
+  "keyboardTabTo": "R1-b",
+  "narrowViewportDomMeasurement": {"width": 390, "documentScrollWidth": 375},
+  "defaultViewportDomMeasurement": {"width": 1706, "height": 846, "documentScrollWidth": 1691},
+  "download": "Automation download-event capture timed out. The actual generated file was subsequently found at its expected filename and its JSON compared with the visible textarea export.",
+  "limitations": "One browser session; no physical mobile device, full accessibility audit, print/PDF layout, or cross-browser test. Narrow viewport DOM measurement is not a full mobile usability test."
+}

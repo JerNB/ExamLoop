@@ -35,7 +35,7 @@ def main():
     for key in ('name', 'version', 'description', 'repository', 'author'):
         require(portable[key] == compat[key], f'Manifest mismatch: {key}')
     require(portable['name'] == 'exam-loop', 'Incorrect plugin identity')
-    require(portable['version'] == '0.2.0', 'Incorrect release version')
+    require(portable['version'] == '0.3.0', 'Incorrect release version')
     require(compat['skills'] == './skills/', 'Incorrect compatibility skill path')
 
     extensions = portable['extensions']['com.openai']
@@ -60,7 +60,7 @@ def main():
     require(entry['policy']['installation'] == 'AVAILABLE' and bool(entry['category']), 'Invalid marketplace metadata')
 
     skills = sorted((PLUGIN / 'skills').iterdir())
-    require({p.name for p in skills if p.is_dir()} == {'exam-review-coach', 'examloop-start'}, 'Missing bundled skill')
+    require({p.name for p in skills if p.is_dir()} == {'gpt-im-cooked', 'examloop-start'}, 'Missing bundled skill')
     for skill in skills:
         content = (skill / 'SKILL.md').read_text(encoding='utf-8')
         match = re.match(r'^---\n(.*?)\n---', content, re.S)
@@ -89,9 +89,9 @@ def main():
     require(Fraction(4, 10) == Fraction(2, 5) and Fraction(9, 12) == Fraction(3, 4), 'Transfer arithmetic mismatch')
     require(Fraction(2, 20) == Fraction(1, 10), 'Ambiguity fixture mismatch')
     pilot = (ROOT / 'tests/PILOT-CASES.md').read_text(encoding='utf-8')
-    require(len(re.findall(r'^### \d+\.', pilot, re.M)) == 17, 'Expected 17 behavioral pilot cases')
+    require(len(re.findall(r'^### \d+\.', pilot, re.M)) == 22, 'Expected 22 behavioral pilot cases')
     print(f'PASS: {len(files)} package files, 2 skills, onboarding paths, starter prompts, links, and synthetic arithmetic.')
-    print('Behavioral pilot cases and host installation remain untested.')
+    print('This command checks package structure only; see VALIDATION.md for behavioral evidence and host limits.')
 
 
 if __name__ == '__main__':

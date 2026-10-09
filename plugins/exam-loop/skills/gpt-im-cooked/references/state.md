@@ -23,6 +23,12 @@ User corrections update the study scope. If an explicit exclusion is lifted, upd
 
 ## Learning record
 
+At the end of each tutoring turn, review whether anything meaningful changed. Save only new or changed learning evidence and preferences. A greeting, a request to continue, seeing a solution, or an unrelated remark requires no new weakness entry. Do not append empty 'no change' events. A small saved-state note in the reply is enough when a record changed.
+
+Keep one current entry per concept and merge repeated reports rather than duplicating them. Preserve short original reasoning and useful attempt provenance, not full chat transcripts. Save self-reported difficulty immediately even before an attempt, labelled self-report. Keep ambiguous grading and missing sources under open questions, not confirmed errors. Update improvement as well as mistakes, and reduce priority when the evidence warrants it. Student requests to remove or correct a record apply to future saved state.
+
+For browser exports, read the supplied attempt file and verify item identity, answer key, original response, hint/reveal flags, and timing only when available. Treat HTML auto-scores as provisional; free-text explanations need tutor review. An answer after a hint/reveal is assisted. Never treat an exported 'mastered' flag as evidence of mastery. Do not claim page activity was saved to the learning record until the export has been reviewed and the record actually written.
+
 Track `Quick start shown` when the welcome was actually presented. Reuse it to avoid repeated onboarding during resume. Do not infer account-wide or installation-wide state from one course record. An explicit request for help can show the guide again without clearing learning progress.
 
 Keep stable concept IDs and append meaningful evidence. For each concept record:

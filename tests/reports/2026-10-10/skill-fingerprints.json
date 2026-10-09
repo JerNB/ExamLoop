@@ -1,0 +1,34 @@
+{
+  "baseline": {
+    "SKILL.md": "2efa3e6b969021f98fd4b7e03616933077695a4d5e9bcab0a2a9b33015f75f2b",
+    "agents/openai.yaml": "0c24bb60f6ea87ef526538cebcd0f9e2f1a737adbc1e3c1ecbee57b403fac99d",
+    "assets/course-profile.md": "1ed13ca3be43f409db203c3b4a17369cba36cb9c5a3e333fea7cba92b063cce6",
+    "assets/first-use.md": "48442947392dc6da72805c7bfe0247ddf718cacc7c58c0bb146a2e64e99fa713",
+    "assets/learning-record.md": "13c2700be32a7634882f230aecbc930f11f844ce132be9ab8823f25216e0aa50",
+    "references/practice-and-feedback.md": "7b3a6594c59c8088b595251d296cd5f4c2b059233b748b89879ec038e04af589",
+    "references/review-artifacts.md": "6a7e9b5ab8ee2932607763ae5019ac98243b9eff34daee114e755f28e6a8b89a",
+    "references/state.md": "6bdd38dbd93d052adf6f006bc71ce50b2be1408a00c1e48e20203bb0f18dd085"
+  },
+  "revised": {
+    "SKILL.md": "15ba5a6afc78fdc0232c590cbfef467f48fbdeee0ec27d0fbf9ccb9bf3ab9d60",
+    "agents/openai.yaml": "33e374864f2881ff4744e6a5295580a0b04b03745742aeadbe3021dee5f16414",
+    "assets/course-profile.md": "bec55b7d59a27da3b6ccc62f3d4f6bf53718437bdd23c2a3d7d791709c3bfcf8",
+    "assets/first-use.md": "e1bcedaf4e04dcd27d66cbbb32c4d2f68dfa7206ad24376d61f6bb49a48902d6",
+    "assets/learning-record.md": "cfaba3cc3e49ba24c8f26955f65fd2a790a6da454c152dce523c9b0119d4f5d7",
+    "references/interactive-review.md": "ec270cb381e98aa3bdcfec92642b7be845a26aec44cdb57e691fb14da70fd2d1",
+    "references/practice-and-feedback.md": "389873b14e49f3a7da65df1c287e2794364cdcfe6ab62e8f47e16fe7924faa8e",
+    "references/review-artifacts.md": "214d7c17a015dffee5e16415b47caf32c0b508c337fe6233d34edf05e692e019",
+    "references/state.md": "92f358e6a1b82ca7d156f2ac8f113d273e479e2abd2b1a1364de09073327ec37"
+  },
+  "resume": {
+    "SKILL.md": "15ba5a6afc78fdc0232c590cbfef467f48fbdeee0ec27d0fbf9ccb9bf3ab9d60",
+    "agents/openai.yaml": "33e374864f2881ff4744e6a5295580a0b04b03745742aeadbe3021dee5f16414",
+    "assets/course-profile.md": "bec55b7d59a27da3b6ccc62f3d4f6bf53718437bdd23c2a3d7d791709c3bfcf8",
+    "assets/first-use.md": "e1bcedaf4e04dcd27d66cbbb32c4d2f68dfa7206ad24376d61f6bb49a48902d6",
+    "assets/learning-record.md": "cfaba3cc3e49ba24c8f26955f65fd2a790a6da454c152dce523c9b0119d4f5d7",
+    "references/interactive-review.md": "ec270cb381e98aa3bdcfec92642b7be845a26aec44cdb57e691fb14da70fd2d1",
+    "references/practice-and-feedback.md": "389873b14e49f3a7da65df1c287e2794364cdcfe6ab62e8f47e16fe7924faa8e",
+    "references/review-artifacts.md": "214d7c17a015dffee5e16415b47caf32c0b508c337fe6233d34edf05e692e019",
+    "references/state.md": "92f358e6a1b82ca7d156f2ac8f113d273e479e2abd2b1a1364de09073327ec37"
+  }
+}

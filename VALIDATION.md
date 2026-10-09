@@ -1,27 +1,26 @@
 # Validation status
 
-Version 0.2.0 — checked October 5, 2026.
+Version 0.3.0 — checked October 10, 2026.
 
 ## Completed
 
-- The bundled skill-creator `quick_validate.py` passed for both `exam-review-coach` and `examloop-start`. This checks skill frontmatter and basic scaffold validity.
-- Both plugin manifests parse as JSON and agree on identity and version. The compatibility skill path resolves.
-- The local marketplace source resolves within this bundle; its name, policy, and category fields were checked.
-- Both UI YAML files parse; their prompts name the corresponding skills and short descriptions fit the supported length.
-- Both manifest onboarding paths resolve to the bundled getting-started skill. The portable and compatibility listing metadata agree; their three unique starter prompts fit the documented 128-character limit. The declared SVG icon exists and parses.
-- All packaged relative Markdown links resolve. Text files contain English content and no personal absolute workspace paths.
-- Synthetic diagnostic, transfer, and ambiguity-fixture arithmetic was recalculated with exact Python fractions. This does not execute or validate R/dplyr behavior.
-- The reusable package validator passed: `python tests/validate_package.py` (requires PyYAML). It checks packaged paths, onboarding metadata, links, skill metadata, prompt constraints, and synthetic arithmetic.
+- Both skills passed skill-creator's `quick_validate.py`.
+- `python tests/validate_package.py` checks manifests, stable plugin identity, renamed skill, onboarding paths, prompts, YAML, SVG, relative links, English package content, and absence of personal absolute paths. It does not certify installation.
+- Real model interactions ran in five isolated tutoring contexts: baseline v0.2 (3 turns), revised skill (5), onboarding/marker recovery (2), fresh resume and browser import (3), and a joint programming/astronomy request (1). These are synthetic requests, not classmates or actual course examinations.
+- An independent reviewer assessed the first three turns without the author's conclusions. Both runs respected exclusions, source gaps, hints, ambiguous grading, and mastery restraint. Baseline unnecessarily retained temporary tiredness; revised omitted it. Live-record verification was partial in that review; the author separately inspected saved records and snapshots.
+- Fresh-chat resume used saved files without earlier conversation history to produce a personalized guide. A thanks-only turn left the learning-record hash unchanged.
+- The personalized HTML page was exercised in Chrome: blank/wrong answers, equivalent percentages/fractions, hints, reveals, retries, reset, provisional scoring, text export, and download. Downloaded JSON matched the visible export. Download-event capture timed out; filesystem verification confirmed the file afterward.
+- Actual export import retained assistance across reset and caught a numerically correct response with wrong reasoning. Prior success remained preserved; page counters did not imply mastery.
+- Keyboard Tab advanced between labelled fields. A narrow-viewport DOM measurement showed no horizontal overflow. Desktop layout was visually inspected. This is not a full accessibility or physical-mobile audit.
+- `python tests/check_run_evidence.py` checks archived export equality, events, assistance, no-change evidence, markers, and selective retention. It does not rerun models.
 
-## Reviewed by the author
-
-The synthetic walkthrough was reviewed against the written rules for scope, hint disclosure, error diagnosis, progress updates, and honest persistence claims. It illustrates intended behavior; it is not an independent behavioral evaluation.
+See the [run report](tests/reports/2026-10-10/REPORT.md), [independent review](tests/reports/2026-10-10/review-first-three.md), and [evaluation method](tests/EVALUATION.md). The [original walkthrough](examples/DEMO.md) remains an authored illustration.
 
 ## Still to test
 
-- Actual installation, skill discovery, and plugin UI behavior in a fresh desktop client.
-- The seventeen fresh-chat behavioral cases in `tests/PILOT-CASES.md`, including first use, immediate grading, resume, onboarding handoff, and standalone fallback.
-- Student usability, retention, and improvement on independent transfer questions.
-- Host-specific code execution, PDF export, and rendered artifact layout during real study tasks.
+- Actual plugin installation, automatic discovery, and onboarding UI in target desktop clients. These runs explicitly loaded skill instructions.
+- Repeated runs across model versions, more packets, unreadable/large PDFs, source conflicts, and all 22 fresh-chat pilot cases.
+- Real student usability, independent learning gains, and delayed retention. Simulations cannot establish these.
+- Physical mobile devices, cross-browser behavior, complete accessibility, and PDF/print layout.
 
-No public plugin-directory listing, cloud service, cross-device sync, or global installation was created. The manifests were checked for documented structure and internal consistency, not certified by a plugin host or public submission validator. Publishing the source repository is separate from installing or certifying the plugin.
+No cloud sync, plugin-directory certification, or automatic browser-to-workspace writeback is provided. Students export page attempts and bring them to a tutor for reviewed record updates. The greeting is a workflow marker, not a context-capacity detector.

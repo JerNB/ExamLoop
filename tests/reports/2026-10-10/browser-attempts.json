@@ -1,0 +1,342 @@
+{
+  "schemaVersion": "1.0",
+  "course": "STA-DEMO",
+  "exam": "Midterm",
+  "artifactId": "sta-demo-review",
+  "artifactVersion": "1.0.0",
+  "sessionId": "session-1791572413311-uqc333",
+  "startedAt": "2026-10-09T19:00:13.311Z",
+  "exportedAt": "2026-10-09T19:01:37.880Z",
+  "instructions": "Attach this JSON with handoff.md, materials.md, and learning-record.md in your next chat. Ask the tutor to verify item identity and numerical checks, review original explanations, and update the learning record. Do not infer mastery from page counters.",
+  "persistence": "In-memory session only; no workspace record was updated by this page.",
+  "itemManifest": [
+    {
+      "itemId": "R1",
+      "topicIds": [
+        "T1"
+      ],
+      "sourceBasis": [
+        "materials.md O1",
+        "materials.md L1",
+        "materials.md E1 Q1"
+      ]
+    },
+    {
+      "itemId": "R2",
+      "topicIds": [
+        "T2"
+      ],
+      "sourceBasis": [
+        "materials.md O1",
+        "materials.md L2",
+        "materials.md E1 Q2"
+      ]
+    },
+    {
+      "itemId": "R3",
+      "topicIds": [
+        "T3"
+      ],
+      "sourceBasis": [
+        "materials.md O1",
+        "materials.md L3",
+        "materials.md E1 Q3"
+      ]
+    }
+  ],
+  "currentResponses": {
+    "R1": {
+      "answers": {
+        "R1-a": "",
+        "R1-b": ""
+      },
+      "explanation": "",
+      "hintUsed": false,
+      "answerRevealed": true,
+      "attemptCount": 3
+    },
+    "R2": {
+      "answers": {
+        "R2-a": "",
+        "R2-b": "",
+        "R2-c": ""
+      },
+      "explanation": "",
+      "hintUsed": true,
+      "answerRevealed": true,
+      "attemptCount": 1
+    },
+    "R3": {
+      "answers": {
+        "R3-a": "35%"
+      },
+      "explanation": "The denominator is everyone in both attendance modes.",
+      "hintUsed": false,
+      "answerRevealed": true,
+      "attemptCount": 1
+    }
+  },
+  "events": [
+    {
+      "order": 1,
+      "type": "attempt",
+      "time": "2026-10-09T19:00:20.985Z",
+      "itemId": "R1",
+      "topicIds": [
+        "T1"
+      ],
+      "sourceBasis": [
+        "materials.md O1",
+        "materials.md L1",
+        "materials.md E1 Q1"
+      ],
+      "hintUsed": false,
+      "answerRevealed": false,
+      "attemptNumber": 1,
+      "originalResponse": {
+        "answers": {
+          "R1-a": "",
+          "R1-b": ""
+        },
+        "explanation": ""
+      },
+      "provisionalCheck": "incomplete-or-invalid",
+      "fieldMatches": null,
+      "explanationReview": "pending-tutor-review",
+      "hintUsedBeforeAttempt": false,
+      "answerRevealedBeforeAttempt": false,
+      "assistanceBeforeAttempt": "no-item-hint-or-reveal",
+      "feedbackRevealedAnswer": false
+    },
+    {
+      "order": 2,
+      "type": "attempt",
+      "time": "2026-10-09T19:00:27.338Z",
+      "itemId": "R1",
+      "topicIds": [
+        "T1"
+      ],
+      "sourceBasis": [
+        "materials.md O1",
+        "materials.md L1",
+        "materials.md E1 Q1"
+      ],
+      "hintUsed": false,
+      "answerRevealed": true,
+      "attemptNumber": 2,
+      "originalResponse": {
+        "answers": {
+          "R1-a": "6/60",
+          "R1-b": "6/60"
+        },
+        "explanation": "I always divide by the whole table."
+      },
+      "provisionalCheck": "numeric-mismatch",
+      "fieldMatches": [
+        false,
+        true
+      ],
+      "explanationReview": "pending-tutor-review",
+      "hintUsedBeforeAttempt": false,
+      "answerRevealedBeforeAttempt": false,
+      "assistanceBeforeAttempt": "no-item-hint-or-reveal",
+      "feedbackRevealedAnswer": true
+    },
+    {
+      "order": 3,
+      "type": "retry",
+      "time": "2026-10-09T19:00:35.762Z",
+      "itemId": "R1",
+      "topicIds": [
+        "T1"
+      ],
+      "sourceBasis": [
+        "materials.md O1",
+        "materials.md L1",
+        "materials.md E1 Q1"
+      ],
+      "hintUsed": false,
+      "answerRevealed": true,
+      "originalResponse": {
+        "answers": {
+          "R1-a": "6/60",
+          "R1-b": "6/60"
+        },
+        "explanation": "I always divide by the whole table."
+      }
+    },
+    {
+      "order": 4,
+      "type": "attempt",
+      "time": "2026-10-09T19:00:37.108Z",
+      "itemId": "R1",
+      "topicIds": [
+        "T1"
+      ],
+      "sourceBasis": [
+        "materials.md O1",
+        "materials.md L1",
+        "materials.md E1 Q1"
+      ],
+      "hintUsed": false,
+      "answerRevealed": true,
+      "attemptNumber": 3,
+      "originalResponse": {
+        "answers": {
+          "R1-a": "25%",
+          "R1-b": "1/10"
+        },
+        "explanation": "The first denominator is the morning group; the second is all participants."
+      },
+      "provisionalCheck": "numeric-match",
+      "fieldMatches": [
+        true,
+        true
+      ],
+      "explanationReview": "pending-tutor-review",
+      "hintUsedBeforeAttempt": false,
+      "answerRevealedBeforeAttempt": true,
+      "assistanceBeforeAttempt": "after-reveal",
+      "feedbackRevealedAnswer": true
+    },
+    {
+      "order": 5,
+      "type": "hint",
+      "time": "2026-10-09T19:00:38.118Z",
+      "itemId": "R2",
+      "topicIds": [
+        "T2"
+      ],
+      "sourceBasis": [
+        "materials.md O1",
+        "materials.md L2",
+        "materials.md E1 Q2"
+      ],
+      "hintUsed": true,
+      "answerRevealed": false
+    },
+    {
+      "order": 6,
+      "type": "attempt",
+      "time": "2026-10-09T19:00:49.269Z",
+      "itemId": "R2",
+      "topicIds": [
+        "T2"
+      ],
+      "sourceBasis": [
+        "materials.md O1",
+        "materials.md L2",
+        "materials.md E1 Q2"
+      ],
+      "hintUsed": true,
+      "answerRevealed": true,
+      "attemptNumber": 1,
+      "originalResponse": {
+        "answers": {
+          "R2-a": "36",
+          "R2-b": "4",
+          "R2-c": "4"
+        },
+        "explanation": "Mutate preserves its input rows; summarise returns one per group."
+      },
+      "provisionalCheck": "numeric-match",
+      "fieldMatches": [
+        true,
+        true,
+        true
+      ],
+      "explanationReview": "pending-tutor-review",
+      "hintUsedBeforeAttempt": true,
+      "answerRevealedBeforeAttempt": false,
+      "assistanceBeforeAttempt": "after-hint",
+      "feedbackRevealedAnswer": true
+    },
+    {
+      "order": 7,
+      "type": "reveal",
+      "time": "2026-10-09T19:00:50.260Z",
+      "itemId": "R3",
+      "topicIds": [
+        "T3"
+      ],
+      "sourceBasis": [
+        "materials.md O1",
+        "materials.md L3",
+        "materials.md E1 Q3"
+      ],
+      "hintUsed": false,
+      "answerRevealed": true,
+      "originalResponse": {
+        "answers": {
+          "R3-a": ""
+        },
+        "explanation": ""
+      }
+    },
+    {
+      "order": 8,
+      "type": "reset-display",
+      "time": "2026-10-09T19:00:51.259Z",
+      "itemId": null,
+      "topicIds": [],
+      "sourceBasis": [],
+      "hintUsed": false,
+      "answerRevealed": false,
+      "currentResponses": {
+        "R1": {
+          "answers": {
+            "R1-a": "25%",
+            "R1-b": "1/10"
+          },
+          "explanation": "The first denominator is the morning group; the second is all participants."
+        },
+        "R2": {
+          "answers": {
+            "R2-a": "36",
+            "R2-b": "4",
+            "R2-c": "4"
+          },
+          "explanation": "Mutate preserves its input rows; summarise returns one per group."
+        },
+        "R3": {
+          "answers": {
+            "R3-a": ""
+          },
+          "explanation": ""
+        }
+      }
+    },
+    {
+      "order": 9,
+      "type": "attempt",
+      "time": "2026-10-09T19:01:25.212Z",
+      "itemId": "R3",
+      "topicIds": [
+        "T3"
+      ],
+      "sourceBasis": [
+        "materials.md O1",
+        "materials.md L3",
+        "materials.md E1 Q3"
+      ],
+      "hintUsed": false,
+      "answerRevealed": true,
+      "attemptNumber": 1,
+      "originalResponse": {
+        "answers": {
+          "R3-a": "35%"
+        },
+        "explanation": "The denominator is everyone in both attendance modes."
+      },
+      "provisionalCheck": "numeric-match",
+      "fieldMatches": [
+        true
+      ],
+      "explanationReview": "pending-tutor-review",
+      "hintUsedBeforeAttempt": false,
+      "answerRevealedBeforeAttempt": true,
+      "assistanceBeforeAttempt": "after-reveal",
+      "feedbackRevealedAnswer": true
+    }
+  ]
+}

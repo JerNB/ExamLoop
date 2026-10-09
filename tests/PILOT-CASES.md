@@ -1,6 +1,6 @@
 # Fresh-chat pilot cases
 
-These are behavioral test inputs and reviewer criteria. They have not been executed with independent students or an independent model evaluator. Start each independent case in a clean chat with access to the skill. Record actual behavior rather than treating this document as proof of success.
+These are behavioral test inputs and reviewer criteria. This entire suite has not been executed. A separate synthetic multi-turn run and onboarding check are documented in VALIDATION.md; overlapping coverage is not a claim that every case below passed. Start each independent case in a clean chat with access to the skill. Record actual behavior rather than treating this document as proof of success.
 
 For source-based tests, give the model the input below as a synthetic course document. When evaluating, judge observable scope, answer disclosure, diagnosis, saved state, and source claims. Do not require exact wording.
 
@@ -114,16 +114,36 @@ Observe: Resumes the activity without repeating onboarding. An explicit follow-u
 
 ### 16. Plugin onboarding handoff
 
-Invoke the bundled `examloop-start` onboarding skill with Document A. Then continue through `exam-review-coach` in the same conversation.
+Invoke the bundled `examloop-start` onboarding skill with Document A. Then continue through `gpt-im-cooked` in the same conversation.
 
 Observe: Uses only the bundled first-use guide and review skill. Shows the welcome once, then starts course-scoped work. Does not display two full introductions or ask the student to repeat the course details.
 
 ### 17. Standalone installation fallback
 
-Expose only the `exam-review-coach` folder, without the plugin manifest or `examloop-start`. Request: "Use $exam-review-coach to get me started with ExamLoop."
+Expose only the `gpt-im-cooked` folder, without the plugin manifest or `examloop-start`. Request: "Use $gpt-im-cooked to get me started with GPT, I'm Cooked."
 
 Observe: Reads its own first-use asset and delivers the welcome and prompt without requiring the onboarding skill or an unsupported installation hook.
 
 ## Pilot notes
 
 Record the host, model when known, package version, inputs, actual files produced, failure points, and assistance needed. In a student pilot also observe time to first useful activity, whether the student returns, and whether later transfer attempts improve. These observations are more useful than collecting only satisfaction ratings.
+
+### 18. Named topic without teaching content
+
+Add skewness to the outline without supplying its definition or lecture notes. Ask for an explanation from supplied content. Expected: acknowledge confirmed topic but missing teaching support; request the relevant excerpt and continue supported work. No general textbook explanation or browsing to fill the gap.
+
+### 19. Selective record and no change
+
+Report a specific difficulty choosing denominators, then say 'Thanks, I am tired today.' Expected: the specific difficulty is saved as self-report; tiredness does not become a concept weakness; thanks does not create an empty attempt or redundant learning entry.
+
+### 20. Personalized output and choice
+
+Supply records showing denominator and mutate-row-count errors, plus an independent partial recovery. Ask for review materials without a format, then choose a webpage. Expected: simple webpage/guide choice, followed by targeted interactions with source locators and a brief explanation of personalization. No invented difficulty or unnecessary repeat choice.
+
+### 21. Missing greeting report
+
+Say 'Your greeting disappeared; is the context full?' Expected: marker restored and accessible skill/records reloaded; no assertion that the greeting measures context or that progress was lost. Do not invent inaccessible memory.
+
+### 22. Browser attempt import after assistance
+
+Bring a page export with wrong answer, hint, reveal, retry and correct answer. Expected: preserve original attempt and assistance history, verify item and key, keep auto-score provisional, do not call the final answer independent or mastered. Save only reviewed evidence, then report the actual saved location.
