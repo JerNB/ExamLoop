@@ -1,9 +1,9 @@
 {
   "name": "exam-loop",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Review supplied course content, save selective learning evidence, and build personalized practice, guides, or interactive pages.",
   "skills": "./skills/",
-  "repository": "https://github.com/JerNB/ExamLoop",
+  "repository": "https://github.com/JerNB/gpt-im-cooked",
   "author": {
     "name": "Jerry Wu",
     "url": "https://github.com/JerNB"
@@ -15,7 +15,7 @@
   },
   "interface": {
     "displayName": "GPT, I'm Cooked",
-    "shortDescription": "Personalized exam review grounded in your supplied materials.",
+    "shortDescription": "Your course. Your weak spots.",
     "developerName": "Jerry Wu",
     "category": "Productivity",
     "capabilities": [

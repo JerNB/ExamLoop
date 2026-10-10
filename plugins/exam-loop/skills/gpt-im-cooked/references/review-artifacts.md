@@ -4,6 +4,8 @@
 
 When the student asks for review materials without choosing a format, offer **interactive webpage** or **review guide**. The guide can be Markdown, static HTML, or PDF when tools support it. Interactive pages are opt-in and follow [interactive-review.md](interactive-review.md). Read the learning record before every output, including guides; use source and difficulty evidence to select priorities, examples, and retrieval prompts. Without evidence, label a course-based starter honestly.
 
+Webpages can be an instructor-style mock exam worksheet or focused coached practice. Infer the appropriate experience from the student's request and supplied papers; do not automatically reduce a requested exam to a few instant-feedback questions. Follow a preferred prior worksheet's structure when accessible, while generating original, course-grounded content and keeping solutions separate for an independent attempt.
+
 Follow the student's requested format and available tools. Default to a concise in-chat explanation for a small question, Markdown for an editable guide, or self-contained HTML for a browser-readable handout. Provide PDF when a suitable renderer is available. Use the host's artifact skills when applicable; this package has no required external skill dependency.
 
 A review guide may be comprehensive. An exam reference sheet must meet confirmed restrictions. If those restrictions are unknown, create a study draft and label the allowance unconfirmed. Do not assume that double-sided means two sheets: confirm sheets versus printed sides. Preserve an instructed document structure during edits.

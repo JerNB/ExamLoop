@@ -18,6 +18,7 @@ You can say:
 - "Give me a small hint, without the answer."
 - "Check my answers and explain my mistakes."
 - "Make a practice exam with a separate key."
+- "Make a mock exam webpage in my instructor's question formats; keep the key separate."
 - "Make my review guide or permitted cheat sheet."
 - "Make an interactive review webpage using my weak concepts."
 - "Continue from my saved learning record."

@@ -22,7 +22,7 @@ def read_json(path):
 
 
 def packaged_files():
-    roots = (ROOT / 'plugins', ROOT / '.agents', ROOT / 'examples', ROOT / 'tests')
+    roots = (ROOT / 'plugins', ROOT / '.agents', ROOT / 'examples', ROOT / 'tests', ROOT / 'docs')
     files = [ROOT / name for name in ('README.md', 'VALIDATION.md', '.gitignore')]
     for directory in roots:
         files.extend(p for p in directory.rglob('*') if p.is_file() and '__pycache__' not in p.parts)
@@ -35,7 +35,7 @@ def main():
     for key in ('name', 'version', 'description', 'repository', 'author'):
         require(portable[key] == compat[key], f'Manifest mismatch: {key}')
     require(portable['name'] == 'exam-loop', 'Incorrect plugin identity')
-    require(portable['version'] == '0.3.0', 'Incorrect release version')
+    require(portable['version'] == '0.3.1', 'Incorrect release version')
     require(compat['skills'] == './skills/', 'Incorrect compatibility skill path')
 
     extensions = portable['extensions']['com.openai']
@@ -45,6 +45,7 @@ def main():
     require(onboarding_path.is_relative_to(PLUGIN) and onboarding_path.is_file(), 'Missing onboarding skill')
     interface = extensions['interface']
     require(interface == compat['interface'], 'Listing metadata mismatch')
+    require(len(interface['shortDescription']) <= 30, 'Listing subtitle exceeds 30 characters')
     prompts = interface['defaultPrompt']
     require(1 <= len(prompts) <= 3 and len(set(prompts)) == len(prompts), 'Invalid starter prompt list')
     require(all(isinstance(p, str) and 0 < len(p) <= 128 and '\n' not in p and '@' not in p for p in prompts), 'Invalid starter prompt')
@@ -75,6 +76,8 @@ def main():
 
     files = packaged_files()
     for path in files:
+        if path.suffix in ('.jpg', '.png', '.zip'):
+            continue
         content = path.read_text(encoding='utf-8')
         require(not re.search(r'[\u3400-\u9fff]', content), f'Non-English package content: {path.name}')
         require(not re.search(r'C:[/\\]Users[/\\]|OneDrive[/\\]|DukeCS[/\\]', content), f'Personal absolute path: {path.name}')

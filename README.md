@@ -1,140 +1,86 @@
-# GPT, I'm Cooked
+<p align="center"><img src="docs/assets/wordmark.svg" alt="GPT, I'm Cooked. Your course. Your weak spots. A better next attempt." width="100%"></p>
 
-**Bring your course materials. Practice independently. Turn mistakes into your next study step.**
+<p align="center"><a href="https://jernb.github.io/gpt-im-cooked/demo.html"><strong>Try the mock exam</strong></a> · <a href="#quick-start">Get started</a> · <a href="docs/INSTALLATION.md">Install</a> · <a href="VALIDATION.md">Testing & limitations</a></p>
 
-Version 0.3.0 — English preview for college students. Repository and plugin ID: ExamLoop / `exam-loop`. Main skill: `$gpt-im-cooked`.
+A reusable **English exam-review skill and plugin** for college students. Bring your course materials and attempts; build original practice, review your reasoning, and use a saved learning record to decide what to study next.
 
-Three promises guide the workflow: teach from your supplied course content, selectively save difficulties and improvements, and build review outputs from that evidence. Choose a personalized interactive webpage or a readable review guide. Missing teaching content is flagged rather than filled with unrequested textbook material.
+**Preview v0.3.1** · Main skill: `$gpt-im-cooked` · Codex-ready instructions · No bundled AI server
 
-Each tutoring reply starts with **Hi student, let's get you uncooked.** This is a visible workflow marker, not a context-capacity detector. If it disappears, say: "Reread the skill and my course profile and learning record, then continue." The marker can survive compaction or disappear for other reasons; bring your saved record when starting a new chat.
+## Try an exam-style demo
 
-If you installed v0.2's `exam-review-coach`, it remains a separate old copy. Install the new `gpt-im-cooked` folder and remove or disable the old copy when ready, to avoid duplicate review workflows. Existing study records can be reused; the repository/plugin identity stays stable for updates.
+[![Preview of the live mock exam worksheet](docs/assets/demo-preview.jpg)](https://jernb.github.io/gpt-im-cooked/demo.html)
 
-GPT, I'm Cooked helps you establish your exam scope, practice the reasoning your course requires, check your answers, track concepts to revisit, and build useful review outputs. It was inspired by a study workflow spanning programming, statistics, and astronomy. Each student supplies their own course materials.
+**[Open the interactive mock exam →](https://jernb.github.io/gpt-im-cooked/demo.html)** · **[Visit the project page →](https://jernb.github.io/gpt-im-cooked/)**
 
-## Start here
+An original, eight-question statistics paper with multiple-select questions, graph interpretation, and R code completion. Navigate the paper, mark items to revisit, record reasoning and confidence, then export your attempt. The answer key stays in a separate page.
 
-After installation, choose **Get me started with GPT, I'm Cooked** if your client offers a starter prompt, or simply send:
+The layout is inspired by a college mock-exam study workflow. The public demo uses a **fictional course packet and student record**; it does not reproduce an instructor's paper or use private study notes. It has no AI connection or automatic grading. Attach its exported JSON to your tutor for feedback and reviewed record updates.
+
+[Course packet](docs/course-packet.md) · [Synthetic learning record](docs/learning-record.md) · [Question blueprint](docs/content-map.md) · [Separate solutions](docs/answer-key.html)
+
+## What makes it useful
+
+| Principle | What happens in your review |
+|---|---|
+| **Your supplied course is the boundary** | Teaching rules need a source in your accessible notes. Missing content is flagged; excluded topics stay out. |
+| **Remember useful learning evidence** | Save meaningful mistakes, specific difficulties, assisted attempts, and improvements. Read that record when resuming. |
+| **Personalize the next output** | Emphasize your documented weak spots in an instructor-style mock exam, focused practice, review guide, or permitted reference sheet. |
+
+Past papers provide evidence of question formats and reasoning patterns. New questions use original situations. A mock exam keeps breadth; a focused drill can concentrate on one weakness. The skill does not predict the next exam or promise a grade.
+
+## Quick start
+
+1. **[Download the standalone skill](https://jernb.github.io/gpt-im-cooked/downloads/gpt-im-cooked-skill-v0.3.1.zip)** and extract the `gpt-im-cooked` folder.
+2. Copy that entire folder into `~/.codex/skills/` (or your configured `$CODEX_HOME/skills/`). Preserve an existing copy unless you intend to replace it. Refresh the skill list or restart the client if needed, then open a new chat.
+3. Add one useful course file and send:
 
 ```text
-Use $gpt-im-cooked to get me started with GPT, I'm Cooked.
-Show me the quick start and help me prepare for my exam.
-```
-
-The quick start explains what materials to bring, how to attempt questions before revealing answers, how to use hints and feedback, and how to save progress and choose personalized review outputs. Start with one useful file; you do not need to collect everything first.
-
-For a more complete first request, copy and edit this prompt:
-
-```text
-Use $gpt-im-cooked to help me prepare for my [course] [midterm/final].
-Here are my course outline, notes, and any practice papers I have.
-Include [confirmed topics]; exclude [topics not covered].
-The exam uses [question formats, if known].
-Reference-sheet rules: [allowance, if known].
-Check the scope and gaps, then give me a short diagnostic.
+Use $gpt-im-cooked to help me prepare for my midterm.
+Here are my notes, exam outline, and any practice papers I have.
+Include the covered topics; exclude anything outside these materials.
 Keep solutions separate until I ask. After I submit an attempt,
-explain my errors, save my learning record, and give me new
-practice on weak concepts. Ask me to choose a personalized interactive
-webpage or an English review guide when we are ready.
+explain my mistakes and save relevant difficulties and improvements.
+Then make an original mock exam webpage in my instructor's formats,
+or a personalized review guide.
 ```
 
-The bracketed details are optional. Natural language works too. The plugin declares an onboarding entry point and three starter prompts; the main skill also contains a first-use fallback for clients that do not surface plugin onboarding. The welcome is not repeated when resuming an established course, unless you ask to see it again. An automatic installation pop-up is not guaranteed across clients.
+You can start with a single outline or set of notes. Past exams, dates, and official keys help, but are optional. The first-use guide explains the loop and proceeds with the material already supplied.
 
-## Try without installing
+**Prefer the plugin?** [Download the plugin package](https://jernb.github.io/gpt-im-cooked/downloads/gpt-im-cooked-plugin-v0.3.1.zip) and follow the [plugin installation guide](docs/INSTALLATION.md). It bundles the same review skill plus onboarding. Local marketplace support varies by client; install one route for normal use to avoid duplicate entries.
 
-Open a new Codex chat in a writable study folder. Attach or point Codex to `plugins/exam-loop/skills/gpt-im-cooked/SKILL.md` and say:
+**Try without installing:** clone or download the repository, keep the whole skill folder accessible, and ask Codex to read [SKILL.md](plugins/exam-loop/skills/gpt-im-cooked/SKILL.md) and its relevant supporting files. This manual preview does not test automatic plugin discovery.
 
-> Read this skill and its relevant supporting files, then get me started with GPT, I'm Cooked. Show the quick start and begin with the course material I provide.
+## The study loop
 
-Keep the entire skill folder accessible so Codex can read its references and templates. This is a manual preview; it does not install the plugin or test automatic skill discovery.
-
-You can review the short [synthetic demonstration](examples/DEMO.md) before supplying any materials.
-
-For an executed example, open the [personalized interactive page](tests/reports/2026-10-10/revised/outputs/sta-demo-review.html) in a browser, compare the [fresh-chat review guide](tests/reports/2026-10-10/resume/outputs/review-guide-01.md), and read the [test report](tests/reports/2026-10-10/REPORT.md). These use a synthetic student's learning evidence. The page runs as a local HTML file; export attempts before closing it and bring the JSON back to a tutor for record updates.
-
-## Install the standalone skill in Codex
-
-The skill is the folder `plugins/exam-loop/skills/gpt-im-cooked`, including all of its contents.
-
-Copy that folder into your Codex user skill directory, usually `~/.codex/skills/` (or `$CODEX_HOME/skills/` if configured). On Windows, `~` means your user folder. Use a new chat after refreshing the skill list or restarting the client if needed. Keep an existing skill with the same name unless you intentionally want to replace it.
-
-You can ask Codex to do the copying:
-
-> Install the local gpt-im-cooked skill from this extracted package in my Codex skill directory. Preserve any existing skill with that name and report a conflict instead of overwriting it.
-
-Invoke it with:
-
-> Use $gpt-im-cooked to get me started with GPT, I'm Cooked. Here are my course outline and lecture notes.
-
-The standalone skill includes the same first-use guide. Host-specific installation and discovery may differ outside Codex.
-
-## Install the plugin preview
-
-The repository includes the review skill, a getting-started skill, plugin manifests, and a local marketplace catalog. The marketplace root is the repository folder, not `.agents/plugins/`.
-
-Clone or download this repository before registering it. With Git, clone it using:
-
-```text
-git clone https://github.com/JerNB/ExamLoop.git
-cd ExamLoop
-```
-
-If your Codex CLI supports local plugin marketplaces, open a terminal in this folder and run:
-
-```text
-codex plugin marketplace add .
-```
-
-Refresh or restart the supported desktop client, open its Plugins Directory, and look for **ExamLoop Preview**. Install **exam-loop** and test it in a new chat. Local marketplace support varies by client. If unavailable, use the standalone skill or manual preview above.
-
-Install either the standalone review skill or the plugin for normal use; both expose the same study workflow. The plugin adds the onboarding entry point and listing prompts. Installing both can create duplicate entries. The catalog's authentication policy is packaging metadata; this skills-only preview has no connected service or sign-in flow.
-
-The catalog and manifests follow the [official plugin packaging documentation](https://developers.openai.com/plugins/build/plugins), with onboarding metadata based on the [official manifest field reference](https://developers.openai.com/plugins/deploy/submission). The package has not yet been installed through a desktop plugin directory or submitted for public listing.
-
-## What to say
+**Course scope → independent attempt → feedback → learning record → targeted practice → review output**
 
 | You want to… | Say… |
 |---|---|
-| Start | "Help me prepare for my midterm. Here is the outline." |
-| Check coverage | "Compare my notes with the exam outline. Skip formulas for now." |
-| Get a hint | "Give me a small hint for question 4, without the answer." |
-| Check work | "Check my saved answers. Keep my answers and add feedback underneath." |
-| Target a weakness | "Give me new questions on my recent mistakes." |
-| Build a mock exam | "Use these past papers to make a practice exam. Keep the key separate." |
-| Make a guide | "Make an English review guide with examples from my weak concepts." |
-| Interactive review | "Make a self-contained interactive webpage based on my saved difficulties. Let me export my attempts." |
-| Make a reference sheet | "The exam permits one typed, double-sided sheet. Make a study draft." |
-| Resume | "Continue my statistics review from this learning record." |
+| Check the boundary | “Compare my notes with the exam outline. Flag missing content.” |
+| Get a nudge | “Give me a small hint for question 4, without the answer.” |
+| Review an attempt | “Check my answers and reasoning. Keep my original attempt.” |
+| Practice like the exam | “Use these papers' formats to build an original mock exam webpage with a separate key.” |
+| Target a difficulty | “Give me new questions on my recent denominator mistakes.” |
+| Make a guide | “Make an English review guide from my weak concepts.” |
+| Resume | “Continue from my course profile and saved learning record.” |
 
-Upload what you already have: an outline, notes, assignments, or practice papers. Past exams and official answer keys are useful but optional. ExamLoop will identify what it can establish and what remains unknown.
+In a writable workspace, the tutor saves a course profile and selective learning record, usually under `study/<course>/<exam>/`. Student data stays outside the installed package. A new chat must have access to that record; bring it when switching computers. Browser exports require tutor review before the record changes.
 
-## Where your progress lives
+Every tutoring reply starts with **“Hi student, let's get you uncooked.”** It is a visible workflow marker. It cannot measure remaining context. If it disappears, ask the tutor to reread the skill and accessible saved records.
 
-In a writable workspace, ExamLoop uses a course profile and learning record, usually under `study/<course>/<exam>/`. It saves attempts, corrective rules, assistance received, and follow-up results. These records stay outside the installed package.
+## What has been tested
 
-A new chat can continue only if it can access those files. Bring the record to a different computer or chat when necessary. If file writing is unavailable, ask for a handoff summary to save yourself. This preview has no cloud sync or automatic access to other conversations.
+The previous v0.3.0 run used five isolated tutoring contexts and 14 total turns, including fresh-chat resume, selective record updates, scope boundaries, and browser export import. The earlier coached page was tested in Chrome. Those archived results describe the tested snapshots, not every later revision.
 
-## What this preview requires
+The v0.3.1 update adds the exam-style demo and clearer presentation. See [validation status](VALIDATION.md), the [new demo check](tests/reports/2026-10-10/SHOWCASE.md), and the [earlier model run](tests/reports/2026-10-10/REPORT.md). Actual plugin installation/discovery and real-student learning gains remain unverified.
 
-- An AI host that can read the skill and supplied materials.
-- File access for saved learning records; otherwise use a conversational handoff.
-- Optional browsing for linked course materials. Upload the relevant files if a link is inaccessible.
-- Optional code runtimes and renderers for executed answer checks and PDF exports. Markdown review guides work without them.
+## Explore the package
 
-The package contains instructions and templates, with no bundled server, runtime, credentials, or background task. It does not guarantee grades or predict an instructor's next exam. Code execution and artifact verification depend on the host, and the assistant must state what was actually checked.
+- [Review skill](plugins/exam-loop/skills/gpt-im-cooked/SKILL.md) and [onboarding skill](plugins/exam-loop/skills/examloop-start/SKILL.md)
+- [Installation and updates](docs/INSTALLATION.md)
+- [Evaluation method](tests/EVALUATION.md) and [22 behavioral pilot cases](tests/PILOT-CASES.md)
+- [Earlier worked demonstration](examples/DEMO.md) and [fresh-chat review guide](tests/reports/2026-10-10/resume/outputs/review-guide-01.md)
 
-## Review and improve it
+For development checks, install PyYAML and run `python tests/validate_package.py`. This checks package structure; it does not install the plugin or evaluate learning gains.
 
-Read the [review skill](plugins/exam-loop/skills/gpt-im-cooked/SKILL.md) and [onboarding skill](plugins/exam-loop/skills/examloop-start/SKILL.md) to inspect the rules. Follow the [evaluation method](tests/EVALUATION.md) and [pilot cases](tests/PILOT-CASES.md) to collect actual replies, state changes, and browser results. See [validation status](VALIDATION.md) for the checks performed on this release.
-
-For package checks, install PyYAML in your development environment and run:
-
-```text
-python tests/validate_package.py
-```
-
-This validates package structure and onboarding wiring. It does not test model behavior or install the plugin.
-
-For a first pilot, watch whether a student can start without coaching, get useful feedback, and resume later. Record the original request, relevant material, actual output, and where intervention was needed. Improve the rule that caused the failure rather than adding unrelated features.
-
-Share the generic package. Keep personal learning records and course materials separate. Public plugin-directory publication and license selection remain separate release decisions.
+The project was previously named **ExamLoop**. The repository's new name is **gpt-im-cooked**; the internal plugin ID remains `exam-loop` for continuity. This is a skills-only preview, not a public plugin-directory listing. Code execution, browsing, and PDF generation depend on the host's available tools.

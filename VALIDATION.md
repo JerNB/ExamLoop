@@ -1,6 +1,8 @@
 # Validation status
 
-Version 0.3.0 — checked October 10, 2026.
+Version 0.3.1 — checked October 10, 2026. The model-run evidence below belongs to v0.3.0 instruction snapshots; it was not rerun for this presentation update.
+
+The v0.3.1 update adds an original exam-style demo, separate solutions and source packet, a project landing page, refreshed branding, and downloadable packages. See the [showcase checks](tests/reports/2026-10-10/SHOWCASE.md) for this revision's browser and package checks. The main skill now distinguishes independent mock exams from coached practice.
 
 ## Completed
 
