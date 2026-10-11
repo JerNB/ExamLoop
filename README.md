@@ -18,6 +18,32 @@ The layout is inspired by a college mock-exam study workflow. The public demo us
 
 [Course packet](docs/course-packet.md) · [Synthetic learning record](docs/learning-record.md) · [Question blueprint](docs/content-map.md) · [Separate solutions](docs/answer-key.html)
 
+## Real study examples
+
+**[Explore the real STA199 and CS201 cases →](https://jernb.github.io/gpt-im-cooked/examples/)**
+
+These are the creator's actual study artifacts from the workflow that inspired the skill, shared for others to explore. The sessions predate the packaged release; they demonstrate the workflow, not measured learning gains from installing the plugin.
+
+### STA199: a mock midterm shaped by saved learning evidence
+
+[![The original STA199 mock paper: a graph interpretation question and question navigation](docs/examples/sta199/mock-preview.png)](https://jernb.github.io/gpt-im-cooked/examples/sta199/)
+
+**[Open the original 32-question Mock Practice B](https://jernb.github.io/gpt-im-cooked/examples/sta199/practice/STA199_Mock_Practice_B.html)** · **[Download the editable QMD + datasets + six graphs](docs/examples/sta199/practice-pack.zip)**
+
+The real record remembers a grouped-`mutate` row-count error, a duplicate-key join error, and multiple-select difficulties. It also removes stale weakness labels after correct execution, and distinguishes self-reported difficulty from assisted-session improvement. Those priorities inform new practice while retaining broad course coverage.
+
+[Case walkthrough & reusable English prompts](https://jernb.github.io/gpt-im-cooked/examples/sta199/) · [English selection of the learning evidence](docs/examples/sta199/learning-record-english.md) · [Original Chinese study record](docs/examples/sta199/learning-record-original.md) · [Separate answer key (spoilers)](docs/examples/sta199/answer-key.md)
+
+The original Quarto HTML is a browser-readable worksheet. Edit the QMD to answer and run R code; it has no automatic grading. The public record removes only computer-local absolute paths and adds a publication note. Private student attempts referenced in that record are not bundled.
+
+### CS201: the actual six-page personalized review guide
+
+[![Original CS201 guide page 4: object references, pair loops, and course-specific code](docs/examples/cs201/page-4.png)](https://jernb.github.io/gpt-im-cooked/examples/cs201/)
+
+**[Read or download the original PDF](docs/examples/cs201/guide.pdf)** · **[Browse all six pages and the case walkthrough](https://jernb.github.io/gpt-im-cooked/examples/cs201/)** · [English source draft](docs/examples/cs201/guide-source.md)
+
+The student's missed questions and follow-up requests became exact constructor traces, identity/equality tables, P0 reference diagrams, P1 token-window visuals, runtime reminders, and relevant APT patterns. This shows a personalized guide built from supplied course code and specific difficulties. The PDF is unchanged; reference-sheet permission depends on your own course.
+
 ## What makes it useful
 
 | Principle | What happens in your review |

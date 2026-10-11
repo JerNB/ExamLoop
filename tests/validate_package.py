@@ -76,10 +76,11 @@ def main():
 
     files = packaged_files()
     for path in files:
-        if path.suffix in ('.jpg', '.png', '.zip'):
+        if path.suffix in ('.jpg', '.png', '.zip', '.pdf', '.xlsx'):
             continue
         content = path.read_text(encoding='utf-8')
-        require(not re.search(r'[\u3400-\u9fff]', content), f'Non-English package content: {path.name}')
+        if path != ROOT / 'docs/examples/sta199/learning-record-original.md':
+            require(not re.search(r'[\u3400-\u9fff]', content), f'Non-English package content: {path.name}')
         require(not re.search(r'C:[/\\]Users[/\\]|OneDrive[/\\]|DukeCS[/\\]', content), f'Personal absolute path: {path.name}')
         if path.suffix == '.md':
             for target in re.findall(r'\]\(([^)]+)\)', content):
